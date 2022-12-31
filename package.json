@@ -7,6 +7,6 @@
     "chai": "^4.3.4",
     "mocha": "^9.0.2",
     "mocha-junit-reporter": "^2.0.0",
-    "yatt-pipe": "^1.0.0"
+    "yatt-pipe": "^0.2.0"
   }
 }

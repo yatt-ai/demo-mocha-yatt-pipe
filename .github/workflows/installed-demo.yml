@@ -20,6 +20,7 @@ jobs:
           cache: npm
       - run: yarn install
       - run: yarn mocha-junit
+        continue-on-error: true
       - run: |
           node node_modules/yatt-pipe/index.js \
             -c creds.json \

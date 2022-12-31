@@ -1,6 +1,8 @@
 {
-  "target": {
-    "token": "yatt_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "base_url": "https://app.yatt.ai/"
+  "yatt": {
+    "target": {
+      "token": "yatt_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "base_url": "https://app.yatt.ai/"
+    }
   }
 }

@@ -25,4 +25,4 @@ jobs:
           node node_modules/yatt-pipe/index.js \
             -c creds.json \
             -s junit:results/mocha-results.xml \
-            -t yatt \
+            -t yatt

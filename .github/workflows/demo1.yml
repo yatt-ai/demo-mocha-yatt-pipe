@@ -1,4 +1,4 @@
-name: Demo Direct Install
+name: Demo GH Action
 
 on: [push]
 
@@ -20,10 +20,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run mocha-junit
-      - run: |
-          npx yatt-pipe \
-            -c creds.json \
-            -s results/mocha-results.xml \
-            -T junit \
-            -t yatt \
-            -p
+      - uses: yatt-ai/yatt-pipe-action
+        with:
+          source: junit:results/mocha-results.xml
+          target: yatt

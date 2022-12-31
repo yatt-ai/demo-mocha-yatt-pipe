@@ -21,9 +21,7 @@ jobs:
       - run: npm ci
       - run: npm run mocha-junit
       - run: |
-          npx yatt-pipe \
+          node node_modules/yatt-pipe/index.js \
             -c creds.json \
-            -s results/mocha-results.xml \
-            -T junit \
+            -s junit:results/mocha-results.xml \
             -t yatt \
-            -p

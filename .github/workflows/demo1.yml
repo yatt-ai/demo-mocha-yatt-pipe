@@ -20,7 +20,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run mocha-junit
-      - uses: yatt-ai/yatt-pipe-action@v0.1.0
+      - uses: yatt-ai/yatt-pipe-action@main
         with:
           source: junit:results/mocha-results.xml
           target: yatt

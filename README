@@ -1,1 +1,3 @@
+# [yatt-pipe](https://github.com/yatt-ai/yatt-pipe) Mocha Examples
 
+Examples for reporting Mocha test results with `yatt-pipe`.  It supports both [usage as an NPM package](.github/workflows/installed-demo.yml) and [usage via GitHub action](.github/workflows/gh-actions-demo.yml).

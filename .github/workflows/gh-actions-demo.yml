@@ -21,9 +21,3 @@ jobs:
       - run: npm install
       - run: npm run mocha-junit
         continue-on-error: true
-      - uses: yatt-ai/yatt-pipe-action@main
-        with:
-          source: junit:results/mocha-results.xml
-          target: yatt
-        env:
-          YATT_TARGET_CREDENTIALS: '{"target":{"token":"yatt_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","base_url":"https://app.yatt.ai/"}}'

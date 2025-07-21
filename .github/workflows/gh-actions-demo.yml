@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
         os: [ubuntu-latest]
     steps:
       - name: checkout
@@ -18,12 +18,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
-      - run: yarn install
-      - run: yarn mocha-junit
+      - run: npm install
+      - run: npm run mocha-junit
         continue-on-error: true
-      - uses: yatt-ai/yatt-pipe-action@main
-        with:
-          source: junit:results/mocha-results.xml
-          target: yatt
-        env:
-          YATT_TARGET_CREDENTIALS: '{"target":{"token":"yatt_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX","base_url":"https://app.yatt.ai/"}}'

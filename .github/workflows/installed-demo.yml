@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
         os: [ubuntu-latest]
     steps:
       - name: checkout
@@ -18,11 +18,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
-      - run: yarn install
-      - run: yarn mocha-junit
+      - run: npm install
+      - run: npm run mocha-junit
         continue-on-error: true
-      - run: |
-          node node_modules/yatt-pipe/index.js \
-            -c creds.json \
-            -s junit:results/mocha-results.xml \
-            -t yatt

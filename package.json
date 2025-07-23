@@ -3,8 +3,8 @@
         "node": ">=18"
     },
     "scripts": {
-        "mocha": "npx mocha",
-        "mocha-junit": "npx mocha --reporter mocha-junit-reporter --reporter-options jenkinsMode=1,outputs=1,mochaFile=results/mocha-results.xml"
+        "mocha": "npx mocha test/**/*.test.js",
+        "mocha-junit": "npx mocha test/**/*.test.js --reporter mocha-junit-reporter --reporter-options jenkinsMode=1,outputs=1,mochaFile=results/mocha-results.xml"
     },
     "dependencies": {
         "chai": "^5.2.1",
